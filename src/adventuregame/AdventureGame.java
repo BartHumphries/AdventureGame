@@ -22,7 +22,7 @@ public class AdventureGame {
         Character playerOne = new Character();
         
         playerOne.setName("Bart");
-        playerOne.setBestTime(7.00);
+        playerOne.setLevel(7.00);
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
