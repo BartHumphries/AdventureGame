@@ -27,12 +27,12 @@ public class AdventureGame {
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
         
-        PartyComposition characterOne = new PartyComposition();
+        Character Dude = new Character();
+        Character Dude2 = new Character();
         
-        characterOne.setCharacterName("Killer Stone");
-        
-        String partyCompositionInfo = characterOne.toString();
-        System.out.println(partyCompositionInfo);
+        PartyComposition partyOne = new PartyComposition();
+        Character[] tempCharList ={Dude, Dude2};
+        partyOne.setCharacterList(tempCharList);
         
         Game gameOne = new Game();
         
@@ -48,6 +48,7 @@ public class AdventureGame {
         
         String locationInfo = locationOne.toString();
         System.out.println(locationInfo);
+        
     }
     
 }

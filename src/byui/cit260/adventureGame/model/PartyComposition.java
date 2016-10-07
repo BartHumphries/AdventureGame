@@ -5,6 +5,8 @@
  */
 package byui.cit260.adventureGame.model;
 
+import byui.cit260.adventureGame.model.Character;
+
 import java.io.Serializable;
 import java.util.Objects;
 /**
@@ -13,31 +15,35 @@ import java.util.Objects;
  */
 public class PartyComposition implements Serializable{
     
-    private String CharacterName;
+    private Character[] characterList;
 
     public PartyComposition() {
     }
     
     
 
-    public String getCharacterName() {
-        return CharacterName;
+    public Character[] getParty() {
+        return characterList;
     }
 
-    public void setCharacterName(String CharacterName) {
-        this.CharacterName = CharacterName;
+    public void setCharacterList(Character[] CharacterName) {
+        this.characterList = characterList;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 37 * hash + Objects.hashCode(this.CharacterName);
+        hash = 37 * hash + Objects.hashCode(this.characterList);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "PartyComposition{" + "CharacterName=" + CharacterName + '}';
+        String returnString = "PartyComposition:";
+        for (Character c : characterList) {
+            returnString += " " + c.getName();
+        }
+        return returnString;
     }
     
     
@@ -51,7 +57,7 @@ public class PartyComposition implements Serializable{
             return false;
         }
         final PartyComposition other = (PartyComposition) obj;
-        if (!Objects.equals(this.CharacterName, other.CharacterName)) {
+        if (!Objects.equals(this.characterList, other.characterList)) {
             return false;
         }
         return true;

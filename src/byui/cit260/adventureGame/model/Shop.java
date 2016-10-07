@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SheepEnterprise.AdventureGame.model;
+package byui.cit260.adventureGame.model;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -12,17 +12,29 @@ import java.util.Objects;
  *
  * @author Bart
  */
-public class Character implements Serializable{
-    // class variables
+public class Shop implements Serializable{
+    
+    private int shopType;
     private String name;
     private int level;
 
-    public Character() {
+    public Shop() {
+    }
+    
+    public boolean compareItem() {
+        // TODO implement character weapon comparison feature
+        // if (item is replaced)
+        // return true
+        // else
+        return false;
     }
 
-    public Character(String name, int level) {
-        this.name = name;
-        this.level = level;
+    public int getShopType() {
+        return shopType;
+    }
+
+    public void setShopType(int shopType) {
+        this.shopType = shopType;
     }
 
     public String getName() {
@@ -44,8 +56,6 @@ public class Character implements Serializable{
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.name);
-        hash = 89 * hash + this.level;
         return hash;
     }
 
@@ -60,8 +70,8 @@ public class Character implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Character other = (Character) obj;
-        if (this.level != other.level) {
+        final Shop other = (Shop) obj;
+        if (this.shopType != other.shopType) {
             return false;
         }
         if (!Objects.equals(this.name, other.name)) {
@@ -69,8 +79,11 @@ public class Character implements Serializable{
         }
         return true;
     }
-    
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "Shop{" + "shopType=" + shopType + ", name=" + name + ", level=" + level + '}';
+    }
+
 }
+    
