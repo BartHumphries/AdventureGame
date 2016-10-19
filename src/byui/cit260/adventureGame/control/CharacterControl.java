@@ -5,13 +5,13 @@
  */
 package byui.cit260.adventureGame.control;
 
-import java.io.Serializable;
-import java.util.Objects;
-
 /**
  *
  * @author Jack
  */
 public class CharacterControl {
-    
+
+ public string chooseCharacter(string name, int health, boolean hostile, string faction,
+         int attackPhysical, int defensePhysical, int attackMagical, int defenseMagical){} 
+         
 }
