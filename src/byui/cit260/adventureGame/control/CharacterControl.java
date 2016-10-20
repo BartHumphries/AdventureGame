@@ -11,7 +11,10 @@ package byui.cit260.adventureGame.control;
  */
 public class CharacterControl {
 
- public string chooseCharacter(string name, int health, boolean hostile, string faction,
+public string chooseCharacter(string name, int health, boolean hostile, string faction,
          int attackPhysical, int defensePhysical, int attackMagical, int defenseMagical){} 
-         
+
+public string chooseWeapons(int attackPhysical, int attackMagical, int defensePhysical, int defenseMagical){}
+
+public string choosePotion(int attackPhysical, int attackMagical, int defensePhysical, int defenseMagical) {
 }
