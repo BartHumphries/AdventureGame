@@ -11,10 +11,20 @@ package byui.cit260.adventureGame.control;
  */
 public class CharacterControl {
 
-public string chooseCharacter(string name, int health, boolean hostile, string faction,
-         int attackPhysical, int defensePhysical, int attackMagical, int defenseMagical){} 
+    public String chooseCharacter(String name, int health, boolean hostile,
+         String faction, int attackPhysical, int defensePhysical,
+         int attackMagical, int defenseMagical){
+      return "This is the return statement from chooseCharacter()\n";
+} 
+ 
+    public String chooseWeapon( int attackPhysical, int defensePhysical,
+         int attackMagical, int defenseMagical){
+      return "This is the return statement from chooseWeapon()\n";        
+}
 
-public string chooseWeapons(int attackPhysical, int attackMagical, int defensePhysical, int defenseMagical){}
+public String choosePotion( int attackPhysical, int defensePhysical,
+         int attackMagical, int defenseMagical){
+      return "This is the return statement from choosePotion()\n"; 
+}
 
-public string choosePotion(int attackPhysical, int attackMagical, int defensePhysical, int defenseMagical) {
 }
