@@ -252,6 +252,40 @@ public class EncounterControlTest {
         assertEquals(expResult, result, 0.004);
 
     }
-    
+      @Test
+    public void testCalcPotionNeeded() {
+        System.out.println("calcPotionNeeded");
+        System.out.println("\tTest case #1");
+        double defense1 = 15.0;
+        double defense2 = 14.0;
+        double attack1 = 20.0;
+        double attack2 = 21;
+        
+        EncounterControl instance = new EncounterControl();
+        double expResult = 1;
+        double result = instance.calcPotionNeeded(defense1, defense2, attack1, attack2);
+        assertEquals(expResult, result, 0.001);
+        
+        System.out.println("\tTest case #2");
+        defense1 = -15.0;
+        defense2 = 14.0;
+        attack1 = 20.0;
+        attack2 = 21;
+        
+        expResult = -1000000;
+        result = instance.calcPotionNeeded(defense1, defense2, attack1, attack2);
+        assertEquals(expResult, result, 0.001);
+        
+        System.out.println("\tTest case #3");
+        defense1 = 15.0;
+        defense2 = 15.0;
+        attack1 = 20.0;
+        attack2 = 21;
+        
+        expResult = 0;
+        result = instance.calcPotionNeeded(defense1, defense2, attack1, attack2);
+        assertEquals(expResult, result, 0.001);
     
 }
+}
+
