@@ -72,4 +72,29 @@ public double calcAbilityToWin(double attackPhysical1, double attackMagical1,
     return level;
    
 }
+public double calcPotionNeeded(double defense1, double defense2, double attack1, double attack2) {
+    
+    if (defense1<0 || defense2<0 || attack1<0 || attack2<0){
+    return -1000000;
+    }
+    double defense = defense2 - defense1;
+    double attack = attack2 - attack1;
+    
+    if (defense > 0 && attack > 0) {
+        return 0;
+    }
+    
+    if (defense > 0 && attack <=0) {
+        double number = 0 - attack;
+        return number;
+    }
+    
+    if (defense <=0 && attack >0) {
+        double number = 0 - defense;
+        return number;
+    }
+    double number = defense + attack;
+    return number;           
+}
+
 }
