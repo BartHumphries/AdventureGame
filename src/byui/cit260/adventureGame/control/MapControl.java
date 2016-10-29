@@ -10,5 +10,8 @@ package byui.cit260.adventureGame.control;
  * 
  */
 public class MapControl {
-    
+    public int location (int row, int column){
+        int location = row + column;
+        return location;
+    }
 }
