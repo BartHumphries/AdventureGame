@@ -98,7 +98,7 @@ public class HelpMenuView {
                 break;
                 
         }
-        return true;
+        return false;
         
     }
 }
