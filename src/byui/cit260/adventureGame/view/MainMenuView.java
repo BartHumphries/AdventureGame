@@ -89,7 +89,7 @@ public class MainMenuView {
                 break;
                 
         }
-        return true;
+        return false;
     }
 
     private void startNewGame() {
