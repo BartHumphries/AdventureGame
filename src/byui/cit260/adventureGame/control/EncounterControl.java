@@ -24,7 +24,7 @@ public String getReward(String weapon, String potion, String ingredients) {
 public String addToCharacter(String item, int amount) {
    return "This is the return statement from addToCharacter()\n"; 
 }
-public double calcAbilityToWin(double attackPhysical1, double attackMagical1,
+public static double calcAbilityToWin(double attackPhysical1, double attackMagical1,
         double defensePhysical1, double defenseMagical1, double attackPhysical2, double attackMagical2,
         double defensePhysical2, double defenseMagical2, double health1, double health2 ) {
     
