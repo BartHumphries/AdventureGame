@@ -20,70 +20,7 @@ public class EncounterControlTest {
     /**
      * Test of attackEnemy method, of class EncounterControl.
      */
-    @Test
-    public void testAttackEnemy() {
-        System.out.println("attackEnemy");
-        int attackPhysical = 0;
-        int defensePhysical = 0;
-        int attackMagical = 0;
-        int defenseMagical = 0;
-        int health = 0;
-        EncounterControl instance = new EncounterControl();
-        String expResult = "";
-        String result = instance.attackEnemy(attackPhysical, defensePhysical, attackMagical, defenseMagical, health);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of usePotion method, of class EncounterControl.
-     */
-    @Test
-    public void testUsePotion() {
-        System.out.println("usePotion");
-        String name = "";
-        int amount = 0;
-        EncounterControl instance = new EncounterControl();
-        String expResult = "";
-        String result = instance.usePotion(name, amount);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getReward method, of class EncounterControl.
-     */
-    @Test
-    public void testGetReward() {
-        System.out.println("getReward");
-        String weapon = "";
-        String potion = "";
-        String ingredients = "";
-        EncounterControl instance = new EncounterControl();
-        String expResult = "";
-        String result = instance.getReward(weapon, potion, ingredients);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of addToCharacter method, of class EncounterControl.
-     */
-    @Test
-    public void testAddToCharacter() {
-        System.out.println("addToCharacter");
-        String item = "";
-        int amount = 0;
-        EncounterControl instance = new EncounterControl();
-        String expResult = "";
-        String result = instance.addToCharacter(item, amount);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+ 
 
     /**
      * Test of calcAbilityToWin method, of class EncounterControl.
