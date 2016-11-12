@@ -23,7 +23,7 @@ public class HelpMenuView extends View {
                   + "\nG - What is the goal of the game"
                   + "\nM - How to move"
                   + "\nW - How to win"
-                  + "\nQ - Quit"
+                  + "\nQ - Quit to Main Menu"
                   + "\n---------------------------------");
     }
     
