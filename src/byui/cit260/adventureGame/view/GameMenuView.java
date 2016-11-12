@@ -13,13 +13,13 @@ import java.util.Scanner;
  *
  * @author vladbalashov
  */
-public class GameMenuView {
+public class GameMenuView extends View {
     
-    private String menu;
     
     public GameMenuView(){
         
-        this.menu = "\n"
+        super ( 
+                "\n"
                   + "\n---------------------------------"
                   + "\n| Game Menu"
                   + "\n---------------------------------"
@@ -27,52 +27,15 @@ public class GameMenuView {
                   + "\nL - Choose location"
                   + "\nA - Calculate ability to win"
                   + "\nQ - Quit"
-                  + "\n---------------------------------";
-        
-    }
-    
-    void displayMenu() {
-        
-        boolean done = false; // set flag to not done
-        
-        System.out.println(menu);
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-                return; // exit the game
-            //do the requested action and display the next view
-            done = this.doAction(menuOption);
-        } while (!done);
+                  + "\n---------------------------------");
         
     }
 
-    
+    @Override
+    public boolean doAction(String value) {
+        value = value.toUpperCase();
         
-       private String getMenuOption() {
-           Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = ""; // value to be returned
-        boolean valid = false; //initialized to not valid
-        while (!valid) {
-            System.out.println("\n Please enter the value. Must be C, A, L or Q");
-            
-            value = keyboard.nextLine(); // get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
-            
-            if (value.length()<1 ) { // value is incorrect
-                System.out.println("\nPlease, enter the value. It can not be blank");
-                continue;     
-            }
-            
-            break; // end the loop
-        }
-        
-        return value; // return the value entered
-    }
-
-    private boolean doAction(String choice) {
-        choice = choice.toUpperCase();
-        
-        switch (choice) {
+        switch (value) {
             case "C": // create and start a new game
                 this.chooseCharacter();
                 break;
