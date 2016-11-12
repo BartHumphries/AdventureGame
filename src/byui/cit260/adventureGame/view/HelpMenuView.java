@@ -11,12 +11,12 @@ import java.util.Scanner;
  *
  * @author vladbalashov
  */
-public class HelpMenuView {
+public class HelpMenuView extends View {
     
-    private String menu;
     
     public HelpMenuView (){
-        this.menu = "\n"
+        super (
+                 "\n"
                   + "\n---------------------------------"
                   + "\n| Help Menu"
                   + "\n---------------------------------"
@@ -24,48 +24,16 @@ public class HelpMenuView {
                   + "\nM - How to move"
                   + "\nW - How to win"
                   + "\nQ - Quit"
-                  + "\n---------------------------------";
+                  + "\n---------------------------------");
     }
     
-    void displayHelpMenuView(){
+    
         
-        boolean done = false; // set flag to not done
+    @Override
+    public boolean doAction(String value){
+        value = value.toUpperCase();
         
-        System.out.println(menu);
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-                return; // exit the game
-            //do the requested action and display the next view
-            done = this.doAction(menuOption);
-        } while (!done);
-        }
-        
-       private String getMenuOption() {
-           Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = ""; // value to be returned
-        boolean valid = false; //initialized to not valid
-        while (!valid) {
-            System.out.println("\n Please enter the value. Must be G, M, W or Q");
-            
-            value = keyboard.nextLine(); // get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
-            
-            if (value.length()<1 ) { // value is incorrect
-                System.out.println("\nPlease, enter the value. It can not be blank");
-                continue;     
-            }
-            
-            break; // end the loop
-        }
-        
-        return value; // return the value entered
-           
-    }
-    public boolean doAction(String choice){
-        choice = choice.toUpperCase();
-        
-        switch (choice) {
+        switch (value) {
             case "G": // goal of the game
                 System.out.println("\n****************************************"
                                  + "\n*-----------Goal of the Game-----------*"
