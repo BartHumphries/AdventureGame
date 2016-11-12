@@ -26,7 +26,7 @@ public class GameMenuView extends View {
                   + "\nC - Choose character"
                   + "\nL - Choose location"
                   + "\nA - Calculate ability to win"
-                  + "\nQ - Quit"
+                  + "\nQ - Quit to Main Menu"
                   + "\n---------------------------------");
         
     }
@@ -59,7 +59,9 @@ public class GameMenuView extends View {
     }
 
     private void chooseLocation() {
-        System.out.println("\n*** chooseLocation() function called ***");
+        ChooseLocationView chooseLocationView = new ChooseLocationView();
+        
+        chooseLocationView.display();
     }
 
 
